@@ -1,7 +1,6 @@
 {
     "name": "devaslanphp/auto-translate",
     "description": "Auto generate translation JSON files",
-    "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -13,12 +12,18 @@
             "name": "DevaslanPHP"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "kkomelin/laravel-translatable-string-exporter": "^1.17",
+        "spatie/laravel-package-tools": "^1.14.0",
         "stichoza/google-translate-php": "^4.1"
     },
-    "require-dev": {
-        "spatie/laravel-package-tools": "^1.9"
-    }
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devaslanphp\\AutoTranslate\\AutoTranslateProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
 }
